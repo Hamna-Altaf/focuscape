@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Focuscape</title>
+</head>
+<body>
+
+  <div class="arrow arrow-right" onclick="nextTheme()">
+    <div class="arrow-top"></div>
+    <div class="arrow-bottom"></div>
+  </div>
+
+  <div class="arrow arrow-left" onclick="prevTheme()">
+    <div class="arrow-top"></div>
+    <div class="arrow-bottom"></div>
+  </div>
+
+  <div class="container">
+    <div class="timer-box">
+      <div id="buttons-group">
+        <button id="short-break-btn" onclick="setBreak(5)">Short break</button>
+        <button id="long-break-btn" onclick="setBreak(10)">Long break</button>
+      </div>
+      <div id="countdown">25:00</div>
+      <button id="start-btn" onclick="startCountDown()">Start</button>
+      <button id="reset-btn" onclick="resetCountDown()">Reset</button>
+      <button id="playPauseBtn" onclick="toggleAudio()">
+  <i id="playPauseIcon" class="fas fa-play"></i>
+</button>
+
+    
+     
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
