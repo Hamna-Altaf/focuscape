@@ -84,6 +84,8 @@ function updateTheme() {
     if (currentAudio) {
         currentAudio.pause();
         currentAudio = null;
+        isPlaying = false;
+         document.getElementById("playPauseIcon").className = "fas fa-play";
     }
     
 }
