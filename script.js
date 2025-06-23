@@ -63,17 +63,14 @@ let themes =  [
         audio: 'https://cdn.pixabay.com/download/audio/2025/05/05/audio_f58cb40be0.mp3?filename=gentle-rain-for-relaxation-and-sleep-337279.mp3'
     },
     {
-        name: 'Cafe',
-        image: 'https://i.pinimg.com/736x/5a/96/89/5a9689bd06a2597645da58af22a5e512.jpg'
-    },
-    {
         name: 'Library',
         image: 'https://i.pinimg.com/736x/63/7a/b0/637ab05f678af728ab98baa70071a410.jpg',
-        audio: 'https://github.com/Hamna-Altaf/focuscape-audios/raw/refs/heads/main/Fire-Crackle-and-Flames-1(chosic.com).mp3'
+        audio: 'https://raw.githubusercontent.com/Hamna-Altaf/focuscape-audios/main/Fire-Crackle-and-Flames-1(chosic.com).mp3'
     },
     {
         name: 'Summer',
-        image: 'https://i.pinimg.com/736x/f2/41/02/f24102b3419fd712d1931ada77b556d9.jpg'
+        image: 'https://i.pinimg.com/736x/f2/41/02/f24102b3419fd712d1931ada77b556d9.jpg',
+        audio: 'https://raw.githubusercontent.com/Hamna-Altaf/focuscape-audios/main/nature-birds-singing-217212.mp3'
     }
 ]
 
@@ -108,7 +105,7 @@ function toggleAudio() {
         } else {
             currentAudio.pause();
             isPlaying = false;
-             document.getElementById("playPauseIcon").className = "fas fa-play";
+            document.getElementById("playPauseIcon").className = "fas fa-play";
     }
 }
 

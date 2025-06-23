@@ -28,38 +28,33 @@ body {
 #countdown {
   color: black;
   font-size: 80px;
+  text-align: center;
 }
 
 #start-btn {
   padding: 20px 100px;
   font-size: 28px;
-  border-radius: 40px;
-  background-color: #dcceff;
+  border-radius: 50px;
+  background-color:#eee8ff;
   cursor: pointer;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
   margin-top: 5px;
   border: 1px solid;
+  text-align: center;
 }
 
 #start-btn:hover {
-  background-color: rgb(255, 152, 170);
+  background-color:#dcceff;
   color: white;
-  border-color: rgb(255, 71, 102);
+  border-color:#413562;
 }
 
-#start-btn:active {
-  background-color: rgb(219, 122, 138);
-}
 
 #buttons-group {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-#short-break-btn,
-#long-break-btn {
-  font-size: 16px;
 }
 
 #short-break-btn,
@@ -69,24 +64,33 @@ body {
   border-radius: 30px;
   background-color: transparent;
   border: 1px solid;
-  border-color: rgb(255, 71, 102);
+  border-color:#eee8ff;
   cursor: pointer;
+  font-size: 16px;
 }
 
-#reset-btn, #playPauseBtn {
+#reset-btn {
   margin-top: 20px;
   padding: 20px 100px;
   font-size: 28px;
   border-radius: 50px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 #short-break-btn:hover,
-#long-break-btn:hover {
-  background-color: rgb(255, 152, 170);
+#long-break-btn:hover,
+#reset-btn:hover {
+  background-color:#eee8ff;
   color: white;
-  border-color: black;
+  border-color:#413562;
+  color: black;
 }
 
+#start-btn:active,#reset-btn:active,#short-break-btn:active,
+#long-break-btn:active {
+  background-color:#413562;
+  color: white;
+}
 
 .arrow {
   position: absolute;
@@ -165,14 +169,129 @@ body {
 }
 
 #playPauseBtn {
-  background-color: #dcceff;
+  background-color: transparent;
   padding: 20px 125px;
-  border: 1px solid black;
-
+  border: none;
+  margin-top: 20px;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-basis: 45%;
+
+@media (max-width: 1200px) {
+  .timer-box {
+    width: 80%;
+    height: auto;
+    padding: 40px;
+  }
+
+  #countdown {
+    font-size: 70px;
+  }
+
+  #start-btn, #reset-btn, #playPauseBtn {
+    font-size: 24px;
+    padding: 18px 80px;
+  }
+
+  #short-break-btn,
+  #long-break-btn {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 100px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .timer-box {
+    width: 90%;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  #countdown {
+    font-size: 56px;
+  }
+
+  #start-btn, #reset-btn, #playPauseBtn {
+    font-size: 20px;
+    padding: 15px 60px;
+    width: auto;
+  }
+
+  #buttons-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #short-break-btn,
+  #long-break-btn {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 90px;
+  }
+
+  .arrow-left {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .arrow-right {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .timer-box {
+    width: 95%;
+    height: auto;
+    padding: 25px 10px;
+    border-radius: 30px;
+  }
+
+  #countdown {
+    font-size: 42px;
+  }
+
+  #start-btn, #reset-btn, #playPauseBtn {
+    font-size: 18px;
+    padding: 15px 40px;
+    width: 100%;
+  }
+
+  #buttons-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #short-break-btn,
+  #long-break-btn {
+    font-size: 12px;
+    padding: 10px 18px;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 70px;
+  }
+
+  .arrow-left {
+    left: 5px;
+  }
+
+  .arrow-right {
+    right: 5px;
+  }
+}
+
